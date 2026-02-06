@@ -23,9 +23,9 @@
 | ファイル | 内容 |
 |----------|------|
 | `CreatorsJapan_Astro移設提案書.md` | 移行計画・見積・スケジュール |
-| `cloudflare-astro-membership-architecture.md` | 会員制サイト技術設計 |
 | `DEVLOG.md` | 開発ログ（時系列） |
 | `CLAUDE.md` | AI CLI向けプロジェクトガイド |
+| `archive/` | 過去提案書・参考資料 |
 
 ## 技術スタック
 
