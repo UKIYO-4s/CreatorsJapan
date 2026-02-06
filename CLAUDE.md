@@ -26,15 +26,11 @@ Astro/
 ├── README.md                              ← プロジェクト概要
 ├── CreatorsJapan_Astro移設提案書.md        ← メイン提案書（見積・スケジュール）
 ├── cloudflare-astro-membership-architecture.md ← 会員制サイト技術設計
-├── クライアント提案メッセージ.md              ← Discord送信用メッセージ
-├── 会話過去ログ.txt                         ← 小野寺さんとのDiscordログ
-├── CreatorsJapan_セキュリティ対策/           ← 過去提案: WPセキュリティ
-│   ├── 00〜10_*.md                         ← 提案書類一式
-│   └── 05_クライアント提出資料/
-└── CreatorsJapan_効率化/                    ← 過去提案: 業務効率化
-    ├── 01〜08_*.md                         ← 提案書類一式
-    ├── portal/                             ← ポータルMVP実装コード
-    └── クライアント提出資料/
+└── archive/                               ← 過去資料・参考資料
+    ├── クライアント提案メッセージ.md          ← Discord送信済みメッセージ
+    ├── 会話過去ログ.txt                     ← 小野寺さんとのDiscordログ
+    ├── CreatorsJapan_セキュリティ対策/       ← 過去提案: WPセキュリティ
+    └── CreatorsJapan_効率化/               ← 過去提案: 業務効率化（ポータルMVP含む）
 ```
 
 ## コミット規約
