@@ -25,8 +25,8 @@ Astro/
 ├── DEVLOG.md                              ← 開発ログ（時系列）
 ├── README.md                              ← プロジェクト概要
 ├── CreatorsJapan_Astro移設提案書.md        ← メイン提案書（見積・スケジュール）
-├── cloudflare-astro-membership-architecture.md ← 会員制サイト技術設計
 └── archive/                               ← 過去資料・参考資料
+    ├── cloudflare-astro-membership-architecture.md ← 会員制サイト技術設計（ざっくり版）
     ├── クライアント提案メッセージ.md          ← Discord送信済みメッセージ
     ├── 会話過去ログ.txt                     ← 小野寺さんとのDiscordログ
     ├── CreatorsJapan_セキュリティ対策/       ← 過去提案: WPセキュリティ
