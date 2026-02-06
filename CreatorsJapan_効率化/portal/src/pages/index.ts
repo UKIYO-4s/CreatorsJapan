@@ -1,0 +1,7 @@
+export { Dashboard } from './Dashboard'
+export { GAReport } from './GAReport'
+export { GSCReport } from './GSCReport'
+export { Articles } from './Articles'
+export { Settings } from './Settings'
+export { Login } from './Login'
+export { UserManagement } from './UserManagement'

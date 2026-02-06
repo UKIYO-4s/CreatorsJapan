@@ -1,0 +1,31 @@
+name = "creators-japan-portal"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "dist"
+
+# KV Namespace
+[[kv_namespaces]]
+binding = "CACHE"
+id = "24af377ea0554a52a127eca7b739b785"
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "portal-db"
+database_id = "5c7f021d-8d91-4e3a-8cf2-a5b80a9bb930"
+
+# 環境変数
+[vars]
+ADMIN_EMAILS = '["admin@example.com"]'
+SITE_URL_PUBLIC = "https://creators-jp.com"
+SITE_URL_SALON = "https://salon.creators-jp.com"
+
+# Cron Triggers (月次レポート用)
+# [triggers]
+# crons = ["0 0 1 * *"]
+
+# Secrets (wrangler secret put で設定)
+# - GOOGLE_SERVICE_ACCOUNT_KEY
+# - DISCORD_WEBHOOK_URL_PUBLIC
+# - DISCORD_WEBHOOK_URL_SALON
+# - GA4_PROPERTY_ID_PUBLIC
+# - GA4_PROPERTY_ID_SALON

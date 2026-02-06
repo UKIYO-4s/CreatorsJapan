@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+dist/
+build/
+.wrangler/
+
+# Environment
+.env
+.env.local
+.env.*.local
+.dev.vars
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cloudflare
+.mf/
+
+# Testing
+coverage/
+
+# Secrets (絶対にコミットしない)
+*.json
+!package.json
+!tsconfig.json
+!tsconfig.node.json
