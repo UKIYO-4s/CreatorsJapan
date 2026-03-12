@@ -49,6 +49,25 @@ export async function fetchArticles(
   return fetchApi<ArticlesResponse>(url)
 }
 
+// 記事タイトル一覧をCSV出力用に全件取得
+export async function fetchAllArticlesForExport(
+  site: Site,
+  params?: Omit<ArticleFetchParams, 'page' | 'limit'>
+): Promise<import('../types').Article[]> {
+  const allArticles: import('../types').Article[] = []
+  let page = 1
+  const limit = 100
+
+  while (true) {
+    const result = await fetchArticles(site, { ...params, page, limit })
+    allArticles.push(...result.articles)
+    if (page >= result.pagination.totalPages) break
+    page++
+  }
+
+  return allArticles
+}
+
 // 記事同期（管理者のみ）
 export async function syncArticles(
   site: Site,

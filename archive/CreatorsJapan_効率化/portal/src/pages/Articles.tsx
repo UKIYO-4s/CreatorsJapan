@@ -6,7 +6,7 @@ import {
   PageLoading,
   ErrorDisplay,
 } from '../components/common'
-import { fetchArticles, syncArticles } from '../lib/api'
+import { fetchArticles, syncArticles, fetchAllArticlesForExport } from '../lib/api'
 import { useAuth } from '../context'
 import type { Site, Article, ArticlesResponse } from '../types'
 
@@ -34,6 +34,9 @@ export function Articles({ site }: ArticlesProps) {
   // 同期状態
   const [syncing, setSyncing] = useState(false)
   const [syncMessage, setSyncMessage] = useState<string | null>(null)
+
+  // エクスポート状態
+  const [exporting, setExporting] = useState(false)
 
   // サイト切り替え時に状態をリセット
   useEffect(() => {
@@ -103,6 +106,49 @@ export function Articles({ site }: ArticlesProps) {
       )
     } finally {
       setSyncing(false)
+    }
+  }
+
+  // CSV出力
+  const handleExportCSV = async () => {
+    setExporting(true)
+    try {
+      const articles = await fetchAllArticlesForExport(site, {
+        category: category || undefined,
+        author: author || undefined,
+        month: month || undefined,
+      })
+
+      const isSalon = site === 'salon'
+      const header = isSalon
+        ? 'タイトル,カテゴリ,執筆者,公開日,URL'
+        : 'タイトル,カテゴリ,公開日,URL'
+
+      const rows = articles.map((a) => {
+        const date = new Date(a.publishedDate).toLocaleDateString('ja-JP')
+        const title = `"${(a.title || '').replace(/"/g, '""')}"`
+        const cat = `"${a.category || ''}"`
+        const url = a.url || ''
+        if (isSalon) {
+          const auth = `"${a.author || ''}"`
+          return `${title},${cat},${auth},${date},${url}`
+        }
+        return `${title},${cat},${date},${url}`
+      })
+
+      const csv = '\uFEFF' + [header, ...rows].join('\n')
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+      const blobUrl = URL.createObjectURL(blob)
+      const anchor = document.createElement('a')
+      anchor.href = blobUrl
+      const dateStr = new Date().toISOString().slice(0, 10)
+      anchor.download = `articles_${site}_${dateStr}.csv`
+      anchor.click()
+      URL.revokeObjectURL(blobUrl)
+    } catch (err) {
+      console.error('CSV export failed:', err)
+    } finally {
+      setExporting(false)
     }
   }
 
@@ -244,6 +290,15 @@ export function Articles({ site }: ArticlesProps) {
             ))}
           </select>
         </div>
+
+        {/* CSV出力 */}
+        <button
+          onClick={handleExportCSV}
+          disabled={exporting || loading}
+          className="px-4 py-1.5 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors text-sm"
+        >
+          {exporting ? '出力中...' : 'CSV出力'}
+        </button>
       </div>
 
       {/* 記事リスト */}
