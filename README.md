@@ -24,6 +24,7 @@
 
 - `MD運用台帳.md`
 - `READMEテンプレート_案件.md`
+- `docs/関連URL台帳.md`
 - `docs/SUBMODULE運用ルール.md`
 - `docs/PORTAL最小要件.md`
 - `portal/README.md`

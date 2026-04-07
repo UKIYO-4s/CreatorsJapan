@@ -24,6 +24,7 @@
 ## 最初に見るファイル
 
 - `../docs/PORTAL最小要件.md`
+- `../docs/関連URL台帳.md`
 - `サイトマップ.md`
 - `index.html`
 
