@@ -1,0 +1,6 @@
+[submodule "記事"]
+	path = 記事
+	url = https://github.com/UKIYO-4s/creators-jp-articles.git
+[submodule "コラム"]
+	path = コラム
+	url = https://github.com/UKIYO-4s/freelance-columns.git
