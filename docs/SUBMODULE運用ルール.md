@@ -10,7 +10,7 @@
 
 ## 原則
 
-- 作業対象の repo で 먼저 commit する
+- 作業対象の repo で先に commit する
 - 親 repo は `submodule の参照先更新` だけを commit する
 - 親 repo から submodule の中身を直接管理しない
 
