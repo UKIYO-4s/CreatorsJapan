@@ -25,6 +25,8 @@
 - `MD運用台帳.md`
 - `READMEテンプレート_案件.md`
 - `docs/SUBMODULE運用ルール.md`
+- `docs/PORTAL最小要件.md`
+- `portal/README.md`
 - `記事/README.md`
 - `記事/00_運用ルール/フォルダ運用ルール.md`
 - `コラム/README.md`
@@ -89,6 +91,7 @@
 - 全体台帳
 - 共通テンプレート
 - 横断ポータルや運用ハブ
+- `portal/` の設計と実装
 
 submodule の責務:
 
