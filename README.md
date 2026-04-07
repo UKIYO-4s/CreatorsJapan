@@ -1,6 +1,8 @@
-# CJ フォルダ運用ハブ
+# CreatorsJapan Workspace
 
-このフォルダは、`クリエイターズジャパン` 関連の制作物を `Markdown を正本にした運用` で管理するための共通ハブです。
+このリポジトリは、`クリエイターズジャパン` 関連の制作物と運用ルールを横断管理するための親ワークスペースです。
+
+現在の役割は、過去の単発セキュリティ案件の保管場所ではなく、`記事` `コラム` `共通運用` を束ねる親 repo です。
 
 ハーネスエンジニアリングの観点では、次の 3 点を重視します。
 
@@ -10,10 +12,19 @@
 
 そのため、作業開始前と作業完了時は、必ず対象フォルダの `README.md` を更新してください。
 
+## GitHub 運用
+
+- Parent repo: `UKIYO-4s/CreatorsJapan`
+- GitHub Project: `CreatorsJapan Workspace`
+- Project URL: `https://github.com/users/UKIYO-4s/projects/1`
+
+この repo では、GitHub Project を `横断タスク管理` の正面入口として使います。
+
 ## 最初に見るファイル
 
 - `MD運用台帳.md`
 - `READMEテンプレート_案件.md`
+- `docs/SUBMODULE運用ルール.md`
 - `記事/README.md`
 - `記事/00_運用ルール/フォルダ運用ルール.md`
 - `コラム/README.md`
@@ -26,7 +37,7 @@
 - `コラム/`
   - `https://salon.creators-jp.com/` 向けのコラム記事制作と投稿運用
 
-このルートは親 Git で管理し、`記事/` と `コラム/` は submodule として接続します。
+このルートは親 Git で管理し、`記事/` と `コラム/` は submodule として接続します。親 repo は `ポータル`, `横断ルール`, `全体台帳`, `運用ハブ` の責務を持ちます。
 
 補足:
 
@@ -85,6 +96,23 @@ submodule の責務:
 - 領域固有のルール
 - 領域ごとの履歴管理
 
+## Project の使い方
+
+GitHub Project `CreatorsJapan Workspace` には、親 repo で管理すべき横断タスクを積みます。
+
+載せるもの:
+
+- repo の役割整理
+- ポータル要件
+- submodule 更新ルール
+- 親 repo に置く docs / templates / dashboard 整備
+
+載せないもの:
+
+- 記事本文の細かい制作差分
+- コラム単体記事の編集ログ
+- 領域固有 repo 内で閉じる作業メモ
+
 ## 変更時の基本手順
 
 1. 対象フォルダの `README.md` を確認する
@@ -93,8 +121,13 @@ submodule の責務:
 4. 状態、正本、次アクション、更新日を `README.md` に反映する
 5. 必要なら `MD運用台帳.md` も更新する
 
+submodule を含む更新手順は `docs/SUBMODULE運用ルール.md` を参照します。
+
 ## 直近の運用改善対象
 
+- `CreatorsJapan` のトップ方針を現行運用に合わせる
+- 親 repo で使うポータルの最小要件整理
+- submodule 更新ルールの固定化
 - `記事/` 側の案件 README の揃え込み
 - `コラム/` 側のルート README 整備
 - フォルダ単位での `状態` と `正本` の見える化
