@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CreatorsJapan Workspace Portal</title>
+    <meta
+      name="description"
+      content="CreatorsJapan の記事・コラム・共通運用を横断して見るためのワークスペースポータル"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">CreatorsJapan Workspace</p>
+        <h1>いま触るべき場所を、先に見せる。</h1>
+        <p class="hero-copy">
+          このポータルは、<code>記事</code> <code>コラム</code> <code>共通 docs</code>
+          <code>GitHub Project</code> を横断して、現在地と次アクションを一画面で把握するための
+          MVP です。
+        </p>
+        <div class="hero-links">
+          <a class="primary-link" href="../README.md">親 README を開く</a>
+          <a class="ghost-link" href="https://github.com/users/UKIYO-4s/projects/1">GitHub Project</a>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel spotlight">
+          <div class="panel-head">
+            <p class="section-kicker">Today</p>
+            <h2>今日見るべきもの</h2>
+          </div>
+          <div class="spotlight-grid">
+            <article class="spot-card accent-orange">
+              <p class="spot-label">Parent Repo</p>
+              <h3>運用ルールと入口</h3>
+              <p>親 README、台帳、submodule ルールを先に確認してから着手する。</p>
+              <a href="../README.md">README.md</a>
+            </article>
+            <article class="spot-card accent-blue">
+              <p class="spot-label">Project</p>
+              <h3>横断タスクの現在地</h3>
+              <p>ポータル整備や親 repo 改修は GitHub Project を正面入口にする。</p>
+              <a href="https://github.com/users/UKIYO-4s/projects/1">CreatorsJapan Workspace</a>
+            </article>
+            <article class="spot-card accent-green">
+              <p class="spot-label">Ops</p>
+              <h3>submodule 更新順</h3>
+              <p>記事/コラム側で先に commit し、親 repo は参照更新だけを持つ。</p>
+              <a href="../docs/SUBMODULE%E9%81%8B%E7%94%A8%E3%83%AB%E3%83%BC%E3%83%AB.md">SUBMODULE運用ルール</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <p class="section-kicker">Navigation</p>
+            <h2>領域別ナビゲーション</h2>
+          </div>
+          <div class="nav-grid">
+            <article class="nav-card">
+              <div class="nav-title-row">
+                <h3>記事</h3>
+                <span class="status-chip in-progress">進行管理</span>
+              </div>
+              <p>creators-jp.com 向けの案件、原稿、素材、公開準備を管理する領域。</p>
+              <ul>
+                <li>正本: 各案件 / 記事フォルダの <code>README.md</code></li>
+                <li>入口: <code>記事/README.md</code></li>
+                <li>補足: 共通ルールは <code>00_運用ルール/</code></li>
+              </ul>
+              <a href="../記事/README.md">記事の入口を見る</a>
+            </article>
+
+            <article class="nav-card">
+              <div class="nav-title-row">
+                <h3>コラム</h3>
+                <span class="status-chip live">公開運用</span>
+              </div>
+              <p>salon.creators-jp.com 向けのコラム制作と投稿運用を管理する領域。</p>
+              <ul>
+                <li>正本: <code>articles/YYYY-MM_slug/</code></li>
+                <li>入口: <code>コラム/README.md</code></li>
+                <li>補足: 記事構成は <code>article.md</code> と <code>meta.md</code></li>
+              </ul>
+              <a href="../コラム/README.md">コラムの入口を見る</a>
+            </article>
+
+            <article class="nav-card">
+              <div class="nav-title-row">
+                <h3>共通 docs</h3>
+                <span class="status-chip ready">運用正本</span>
+              </div>
+              <p>ワークスペース横断の台帳、テンプレート、運用ルールを置く領域。</p>
+              <ul>
+                <li>台帳: <code>MD運用台帳.md</code></li>
+                <li>テンプレート: <code>READMEテンプレート_案件.md</code></li>
+                <li>ルール: <code>docs/</code></li>
+              </ul>
+              <a href="../MD%E9%81%8B%E7%94%A8%E5%8F%B0%E5%B8%B3.md">台帳を見る</a>
+            </article>
+
+            <article class="nav-card">
+              <div class="nav-title-row">
+                <h3>GitHub Project</h3>
+                <span class="status-chip waiting">横断タスク</span>
+              </div>
+              <p>親 repo 側で持つポータル、README、運用ルールのタスク管理を行う。</p>
+              <ul>
+                <li>対象: 親 repo に置く機能と文書</li>
+                <li>非対象: 個別記事の細かな制作差分</li>
+                <li>入口: <code>CreatorsJapan Workspace</code></li>
+              </ul>
+              <a href="https://github.com/users/UKIYO-4s/projects/1">Project を開く</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel split-panel">
+          <div class="split-column">
+            <div class="panel-head">
+              <p class="section-kicker">Status</p>
+              <h2>状態一覧</h2>
+            </div>
+            <div class="status-list">
+              <div class="status-row"><span class="status-dot prep"></span><strong>準備中</strong><span>要件整理、調査開始前</span></div>
+              <div class="status-row"><span class="status-dot progress"></span><strong>進行中</strong><span>原稿、構成、制作の手を動かしている状態</span></div>
+              <div class="status-row"><span class="status-dot review"></span><strong>確認待ち</strong><span>レビューや意思決定待ち</span></div>
+              <div class="status-row"><span class="status-dot publish"></span><strong>公開待ち</strong><span>投稿直前、投入待ち</span></div>
+              <div class="status-row"><span class="status-dot live"></span><strong>公開済み</strong><span>公開後、保守または次回改修待ち</span></div>
+              <div class="status-row"><span class="status-dot hold"></span><strong>保留</strong><span>依頼待ち、判断待ち、優先度保留</span></div>
+            </div>
+          </div>
+
+          <div class="split-column">
+            <div class="panel-head">
+              <p class="section-kicker">Next</p>
+              <h2>次アクション</h2>
+            </div>
+            <ol class="next-list">
+              <li><strong>ワイヤー決定</strong><span>ポータルに出す 4 ブロックの並びを固定する。</span></li>
+              <li><strong>データ源整理</strong><span><code>MD運用台帳.md</code> と各 README のどこを読むか決める。</span></li>
+              <li><strong>静的初版の拡張</strong><span>この HTML を実データに寄せ、必要なら Astro へ上げる。</span></li>
+            </ol>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
