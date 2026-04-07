@@ -122,15 +122,15 @@
           <div class="split-column">
             <div class="panel-head">
               <p class="section-kicker">Status</p>
-              <h2>状態一覧</h2>
+              <h2>現在の状態スナップショット</h2>
             </div>
             <div class="status-list">
-              <div class="status-row"><span class="status-dot prep"></span><strong>準備中</strong><span>要件整理、調査開始前</span></div>
-              <div class="status-row"><span class="status-dot progress"></span><strong>進行中</strong><span>原稿、構成、制作の手を動かしている状態</span></div>
-              <div class="status-row"><span class="status-dot review"></span><strong>確認待ち</strong><span>レビューや意思決定待ち</span></div>
-              <div class="status-row"><span class="status-dot publish"></span><strong>公開待ち</strong><span>投稿直前、投入待ち</span></div>
-              <div class="status-row"><span class="status-dot live"></span><strong>公開済み</strong><span>公開後、保守または次回改修待ち</span></div>
-              <div class="status-row"><span class="status-dot hold"></span><strong>保留</strong><span>依頼待ち、判断待ち、優先度保留</span></div>
+              <div class="status-row"><span class="status-dot progress"></span><strong>記事</strong><span>主案件は Apple Creator Studio 企画群。公開済み記事あり、整理継続中。</span></div>
+              <div class="status-row"><span class="status-dot review"></span><strong>企画群</strong><span>各記事の実公開状態は README と WordPress 側の照合がまだ必要。</span></div>
+              <div class="status-row"><span class="status-dot live"></span><strong>コラム</strong><span><code>articles/YYYY-MM_slug/</code> 形式へ移行済み。ルート入口は整備済み。</span></div>
+              <div class="status-row"><span class="status-dot publish"></span><strong>ポータル</strong><span>静的初版は作成済み。次は Markdown の実データをどう反映するかを決める段階。</span></div>
+              <div class="status-row"><span class="status-dot hold"></span><strong>管理 URL</strong><span>公式サイト側 WP ログイン URL の <code>redirect_to</code> は意図確認が必要。</span></div>
+              <div class="status-row"><span class="status-dot prep"></span><strong>共通運用</strong><span>台帳とテンプレートは揃った。各案件 README の揃え込みは継続対象。</span></div>
             </div>
           </div>
 
@@ -140,9 +140,9 @@
               <h2>次アクション</h2>
             </div>
             <ol class="next-list">
-              <li><strong>ワイヤー決定</strong><span>ポータルに出す 4 ブロックの並びを固定する。</span></li>
-              <li><strong>データ源整理</strong><span><code>MD運用台帳.md</code> と各 README のどこを読むか決める。</span></li>
-              <li><strong>静的初版の拡張</strong><span>この HTML を実データに寄せ、必要なら Astro へ上げる。</span></li>
+              <li><strong>Apple Creator Studio 企画群の実公開状態を確定</strong><span><code>記事/02_追加記事案件/2026-03_Apple Creator Studio企画群/README.md</code> と WordPress を照合して状態表記を固める。</span></li>
+              <li><strong>公式サイト側ログイン URL を確認</strong><span><code>docs/関連URL台帳.md</code> に記録した <code>redirect_to</code> の不整合が意図通りかを確認し、必要なら修正する。</span></li>
+              <li><strong>ポータルのデータ源を固定</strong><span><code>MD運用台帳.md</code>、<code>記事/README.md</code>、<code>コラム/README.md</code> のどの行を画面に出すか決める。</span></li>
             </ol>
           </div>
         </section>
